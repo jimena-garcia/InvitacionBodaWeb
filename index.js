@@ -1,3 +1,10 @@
+
+// Función para hacer aparecer el contenido de la página con una transición suave
+window.onload = function () {
+  document.querySelector('.main-container').classList.add('visible');
+}
+
+
 // Mostrar el popup de RSVP
 function showRSVPPopup() {
   document.getElementById('rsvp-popup').classList.add('active');
