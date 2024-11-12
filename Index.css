@@ -1,0 +1,202 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  color: #fff; /* Texto blanco por defecto */
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  background: url('c8cc9da3572f6ca7bba1d0da0adb34fc.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 10em 1em;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 4.5em;
+  margin-bottom: 0.3em;
+}
+
+.hero-subtitle {
+  font-size: 3em;
+  font-weight: 300;
+  margin-bottom: 0.2em;
+}
+
+.hero-date {
+  font-size: 1.8em;
+  font-style: italic;
+  margin-top: 0.2em;
+}
+
+/* Secciones */
+.section {
+  padding: 6em 2em;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  color: #fff; /* Texto blanco */
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+}
+
+.section-text {
+  font-size: 1.8em;
+  margin-bottom: 2em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fondo de las secciones específicas */
+.details {
+  background-color: #586667; /* Fondo para "¿Dónde y Cuándo?" */
+}
+
+.about {
+  background-color: #a2aaab; /* Fondo para "Nuestra Historia" */
+}
+
+.countdown {
+  background-color: #a2aaab; /* Fondo color para secciones pares */
+}
+
+.rsvp {
+  background-color: #586667; /* Fondo color para secciones impares */
+}
+
+/* Estilo para las ubicaciones */
+.event-location {
+  font-size: 1.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3em 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.event-location-content {
+  width: 48%;
+  text-align: left;
+}
+
+.event-location-image {
+  width: 48%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Estilo para el botón del mapa */
+.location-button {
+  background: #94827e; /* Color principal de la paleta */
+  color: #fff;
+  border: 2px solid #868c94; /* Un color más oscuro para el borde */
+  padding: 1em 2.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background 0.3s ease, border 0.3s ease;
+  border-radius: 5px;
+  margin-top: 2em;
+}
+
+.location-button:hover {
+  background: #586667; /* Color de hover más oscuro */
+  border-color: #a2aaab; /* Cambio de borde al hacer hover */
+}
+
+/* Estilo Cuenta Regresiva */
+.countdown-timer {
+  font-size: 2.5em;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Botón de RSVP */
+.rsvp-button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 1em 2.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 5px;
+}
+
+.rsvp-button:hover {
+  background: #555;
+}
+
+/* Popup de RSVP */
+.rsvp-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.rsvp-popup.active {
+  display: block;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-text {
+  font-size: 1.8em;
+  margin-bottom: 1.5em;
+}
+
+.popup-close {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 1em 2.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 5px;
+}
+
+.popup-close:hover {
+  background: #555;
+}
+
+/* Animaciones de entrada */
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

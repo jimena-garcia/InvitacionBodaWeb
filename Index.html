@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación de Boda</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!-- Hero / Portada -->
+  <header class="hero">
+    <h1 class="hero-title">Hugo & María</h1>
+    <p class="hero-subtitle">Nos Casamos</p>
+    <p class="hero-date">29 de Noviembre, 3:00 PM</p>
+  </header>
+
+  <!-- Sección Cuenta Regresiva -->
+  <section class="section countdown">
+    <h2 class="section-title">Faltan:</h2>
+    <div id="countdown" class="countdown-timer"></div>
+  </section>
+
+  <!-- Sección Detalles del Evento -->
+  <section class="section details">
+    <h2 class="section-title">¿Dónde y Cuándo?</h2>
+    <p class="section-text">Te invitamos a ser parte de este día tan especial en dos lugares maravillosos:</p>
+    
+    <div class="event-location">
+      <div class="event-location-content">
+        <h3>Ceremonia Civil</h3>
+        <p><strong>Dirección:</strong> Av. de los Sueños 123</p>
+        <p><strong>Fecha:</strong> 29 de Noviembre, 3:00 PM</p>
+        <p><strong>Vestimenta:</strong> Formal</p>
+      </div>
+      <img src="https://i.pinimg.com/564x/db/32/1b/db321b80a821ab3ae81e9bca6bbe5ef2.jpg" alt="Ceremonia Civil" class="event-location-image">
+    </div>
+    <button class="location-button" onclick="window.location.href='https://www.google.com/maps'">Ver Mapa</button>
+
+    <div class="event-location">
+      <div class="event-location-content">
+        <h3>Recepción</h3>
+        <p><strong>Dirección:</strong> Salón Principal, Av. de los Sueños 456</p>
+        <p><strong>Fecha:</strong> 29 de Noviembre, 5:00 PM</p>
+        <p><strong>Vestimenta:</strong> Formal</p>
+      </div>
+      <img src="https://i.pinimg.com/564x/9f/88/76/9f8876c1087e3222eab110b20ff4419a.jpg" alt="Recepción" class="event-location-image">
+    </div>
+    
+    <button class="location-button" onclick="window.location.href='https://www.google.com/maps'">Ver Mapa</button>
+  </section>
+
+  <!-- Sección Nuestra Historia -->
+  <section class="section about">
+    <h2 class="section-title">Nuestra Historia</h2>
+    <p class="section-text">
+      En tiempos antiguos, cuando las estrellas brillaban con más intensidad y el eco de viejas canciones resonaba en
+      los valles lejanos, dos caminos se cruzaron bajo cielos eternos. Hugo y María, viajeros en el vasto tapiz de la
+      vida, se encontraron como si el mismo destino los hubiese tejido juntos. A través de días luminosos y noches
+      serenas, sus pasos se unieron en una senda compartida, marcada por aventuras, sueños y promesas que trascienden
+      los años. Ahora, en la encrucijada de un nuevo capítulo, te invitamos a caminar junto a nosotros, y a celebrar el
+      inicio de una historia que, como las mejores leyendas, está destinada a perdurar.
+    </p>
+  </section>
+
+  <!-- Sección Confirmación de Asistencia -->
+  <section class="section rsvp">
+    <h2 class="section-title">Confirmación de Asistencia</h2>
+    <p class="section-text">
+      Por favor confirma tu asistencia antes del 15 de noviembre. Estamos emocionados de compartir este día tan especial
+      contigo.
+    </p>
+    <button class="rsvp-button" onclick="showRSVPPopup()">Confirmar Asistencia</button>
+  </section>
+
+  <!-- Popup de Confirmación de Asistencia -->
+  <div class="rsvp-popup" id="rsvp-popup">
+    <div class="popup-content">
+      <p class="popup-text">¡Gracias por confirmar! Nos alegra que seas parte de este día.</p>
+      <button class="popup-close" onclick="closeRSVPPopup()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
