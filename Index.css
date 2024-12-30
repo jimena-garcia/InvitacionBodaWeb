@@ -207,3 +207,23 @@ body {
   font-weight: bold;
   color: #8c9dad; /* Color para el número de acompañantes */
 }
+
+#music-button {
+  position: fixed; /* Posicionamiento fijo en la pantalla */
+  bottom: 20px; /* Ajusta la distancia desde la parte inferior */
+  left: 20px; /* Ajusta la distancia desde la parte izquierda */
+  background-color: #2d4051; /* Color de fondo */
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%; /* Hace el botón redondeado */
+  z-index: 9999; /* Asegura que esté encima de todos los demás elementos */
+  transition: background-color 0.3s ease;
+}
+
+#music-button:hover {
+  background-color: #8c9dad; /* Color cuando el mouse pasa sobre el botón */
+}
+

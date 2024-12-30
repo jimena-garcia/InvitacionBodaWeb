@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitación de Boda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,6 +79,24 @@
       Estamos encantados de que seas parte de este día especial. Para asegurarnos de que todos nuestros invitados se sientan cómodos, agradeceríamos que confirmaras tu asistencia con los <b><span id="allowed-guests"> 2 </span></b>lugares para ustedes. ¡Gracias por tu comprensión!
     </p>
   </section>
+
+<!-- Botón para controlar la música -->
+<button id="music-button">
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-skip-end-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407L9.5 8.972V10.5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-1 0v1.528z"/>
+  </svg>
+</button>
+
+<!-- Audio con Autoplay -->
+<audio id="music" autoplay muted>
+  <source src="audioboda.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
+
+
+
+
+
   <script src="index.js"></script>
 </body>
 

@@ -41,3 +41,36 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+
+
+
+/*------------------------------------------
+  = MUSIC
+  -------------------------------------------*/
+  try {
+    var music = document.getElementById('music');
+    var audioIsPlaying = false;
+  
+    // Desmutear después de cargar la página
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        music.muted = false; // Quitar el silencio
+      }, 100);
+    });
+  
+    var musicButton = document.getElementById('music-button');
+  
+    musicButton.addEventListener('click', function() {
+      if (audioIsPlaying) {
+        music.pause();
+        audioIsPlaying = false;
+      } else {
+        music.play();
+        audioIsPlaying = true;
+      }
+    });
+  
+  } catch (error) {
+    console.error("Error al manejar la música:", error);
+  }
+  
