@@ -6,20 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitación de Boda</title>
   <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="sticky-header">
-    M&H 29.11.24
+    M&H 01.02.25
   </header>
 
-  
   <!-- Hero / Portada -->
   <header class="hero">
     <h1 class="hero-title">Hugo & María</h1>
     <p class="hero-subtitle">Nos Casamos</p>
-    <p class="hero-date">1 de Febrero, 3:00 PM</p>
+    <p class="hero-date">1 de Febrero, 7:00 PM</p>
   </header>
 
   <!-- Sección Cuenta Regresiva -->
@@ -32,29 +37,30 @@
   <section class="section details">
     <h2 class="section-title">¿Dónde y Cuándo?</h2>
     <p class="section-text">Te invitamos a ser parte de este día tan especial en dos lugares maravillosos:</p>
-    
+
     <div class="event-location">
       <div class="event-location-content">
-        <h3>Ceremonia Civil</h3>
-        <p><strong>Dirección:</strong> Av. de los Sueños 123</p>
-        <p><strong>Fecha:</strong> 29 de Noviembre, 3:00 PM</p>
-        <p><strong>Vestimenta:</strong> Formal</p>
+        <h3>Ceremonia Religiosa</h3>
+        <h3>Iglesia de Santa Lucia</h3>
+        <p><strong>Dirección:</strong> C. 60 502, Parque Santa Lucia, Centro, 97000 Mérida, Yuc.</p>
+        <p><strong>Fecha:</strong> 1 de Febrero, 7:00 PM</p>
       </div>
-      <img src="https://i.pinimg.com/564x/db/32/1b/db321b80a821ab3ae81e9bca6bbe5ef2.jpg" alt="Ceremonia Civil" class="event-location-image">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/fb/a3/90/iglesia-de-santa-lucia.jpg?w=1200&h=-1&s=1" alt="Ceremonia Civil" class="event-location-image">
     </div>
-    <button class="location-button" onclick="window.location.href='https://www.google.com/maps'">Ver Mapa</button>
+    <button class="location-button" onclick="window.location.href= 'https://maps.app.goo.gl/P8Ro1MfU8QvfiYC1A' ">Ver Mapa</button>
 
     <div class="event-location">
       <div class="event-location-content">
         <h3>Recepción</h3>
-        <p><strong>Dirección:</strong> Salón Principal, Av. de los Sueños 456</p>
+        <h3>Salón de Eventos Baktún</h3>
+        <p><strong>Dirección:</strong> Avenida Itzáez x 40 y 90-A, Mérida, Yucatán</p>
         <p><strong>Fecha:</strong> 29 de Noviembre, 5:00 PM</p>
         <p><strong>Vestimenta:</strong> Formal</p>
       </div>
-      <img src="https://i.pinimg.com/564x/9f/88/76/9f8876c1087e3222eab110b20ff4419a.jpg" alt="Recepción" class="event-location-image">
+      <img src="https://scontent.fmid2-1.fna.fbcdn.net/v/t39.30808-6/441446941_976644251130543_5150765710373870156_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGtnDBCCOZEdhyQgguZelmiWJTEidRvsPZYlMSJ1G-w9rZoL8zZNn2ovzPKgVZR7Xte8Feh6YKkLLxEQ1P6EQ82&_nc_ohc=yy2GqOYiLD8Q7kNvgFepU0Z&_nc_oc=Adis3we41m7eRrPwYToWNW829G3V7ZwfDWNOH6WVLNuQevkNhyRMm29rhmCURAjrAfw&_nc_zt=23&_nc_ht=scontent.fmid2-1.fna&_nc_gid=AQpWu2QkYOJ-dIxOwnMxv71&oh=00_AYAASK6XwtPkCCnZcPUP823Z6kGt_wrNzeVW9Lu3WL5vwg&oe=6778B8EB" alt="Recepción" class="event-location-image">
     </div>
-    
-    <button class="location-button" onclick="window.location.href='https://www.google.com/maps'">Ver Mapa</button>
+
+    <button class="location-button" onclick="window.location.href='https://maps.app.goo.gl/Ai2TGPMoHbwEdJ9MA'">Ver Mapa</button>
   </section>
 
   <!-- Sección Nuestra Historia -->
@@ -70,25 +76,15 @@
     </p>
   </section>
 
-  <!-- Sección Confirmación de Asistencia -->
-  <section class="section rsvp">
-    <h2 class="section-title">Confirmación de Asistencia</h2>
+  <!-- Sección Número de Invitados -->
+  <section class="section guests">
+    <h2 class="section-title">Número de Invitados</h2>
     <p class="section-text">
-      Por favor confirma tu asistencia antes del 15 de noviembre. Estamos emocionados de compartir este día tan especial
-      contigo.
+      Estamos encantados de que seas parte de este día especial. Para asegurarnos de que todos nuestros invitados se sientan cómodos, agradeceríamos que solo confirmaras tu asistencia con <span id="allowed-guests">2</span> acompañante(s). ¡Gracias por tu comprensión!
     </p>
-    <button class="rsvp-button" onclick="showRSVPPopup()">Confirmar Asistencia</button>
   </section>
-
-  <!-- Popup de Confirmación de Asistencia -->
-  <div class="rsvp-popup" id="rsvp-popup">
-    <div class="popup-content">
-      <p class="popup-text">¡Gracias por confirmar! Nos alegra que seas parte de este día.</p>
-      <button class="popup-close" onclick="closeRSVPPopup()">Cerrar</button>
-    </div>
-  </div>
-
   <script src="index.js"></script>
 </body>
+
 
 </html>
