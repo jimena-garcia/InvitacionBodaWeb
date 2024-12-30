@@ -17,7 +17,7 @@ function closeRSVPPopup() {
 
 // Función para la cuenta regresiva
 function updateCountdown() {
-  const eventDate = new Date("November 29, 2024 15:00:00").getTime();
+  const eventDate = new Date("February 1, 2025 19:00:00").getTime();
   const now = new Date().getTime();
   const timeLeft = eventDate - now;
 
