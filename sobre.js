@@ -1,5 +1,6 @@
 // Inicializa WOW.js
-new WOW().init();
+new WOW({animateClass: 'animate__animated'}).init();
+
 
 // Función para redirigir con una transición suave
 function redirectToIndex() {
