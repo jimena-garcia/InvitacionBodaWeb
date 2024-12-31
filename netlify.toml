@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/sobre.html"
-  to = "/Index.html"
+  from = "/"
+  to = "/sobre.html"
   status = 200
   force = true
