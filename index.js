@@ -85,9 +85,6 @@ window.addEventListener('scroll', function() {
     console.error("Error al manejar la música:", error);
   }
   
-  document.querySelector('.nav-toggle').addEventListener('click', () => {
-    const nav = document.querySelector('.nav');
-    nav.classList.toggle('active');
-  });
+
   
   
