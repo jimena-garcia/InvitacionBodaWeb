@@ -9,8 +9,4 @@
    }, 1000); // Tiempo en milisegundos, debe coincidir con la duración de la transición
  }
 
- // Función para hacer desaparecer los elementos de bienvenida
- function fadeOutWelcomeElements() {
-   document.querySelector('.pre-page-content').classList.add('fade-out');
-   document.querySelector('.wax-seal-container').classList.add('fade-out');
- }
+ 
