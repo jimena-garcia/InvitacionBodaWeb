@@ -5,97 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitación de Boda</title>
-  <style>
-    /* Reset del estilo */
-    body, html {
-      height: 100%;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-      overflow: hidden; /* Para evitar desplazamiento durante la animación */
-    }
-
-    /* Contenedor para el sobre */
-    .envelope-container {
-      position: relative;
-      width: 100vw; /* 100% del ancho de la ventana */
-      height: 100vh; /* 100% del largo de la ventana */
-      cursor: pointer;
-      opacity: 1;
-      transition: opacity 1s ease-in-out; /* Transición de opacidad */
-    }
-
-    /* Contenedor del sobre con animación de giro */
-    .envelope {
-      position: relative;
-      width: 100%; /* Se ajusta al 100% del ancho */
-      height: 100%; /* Se ajusta al 100% del alto */
-      transition: transform 0.5s ease-in-out;
-      transform-style: preserve-3d;
-      transform: rotateY(0deg);
-    }
-
-    /* Cara frontal y posterior del sobre */
-    .envelope-front,
-    .envelope-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #f5f5f5;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* Cara frontal del sobre */
-    .envelope-front {
-      background-color: transparent;
-      transform: rotateY(0deg);
-      z-index: 2;
-    }
-
-    /* Estilo de la imagen del sobre */
-    .envelope-icon {
-      width: auto;
-      height: 80%; /* Ajusta la altura de la imagen al 80% del contenedor */
-      object-fit: contain;
-    }
-
-    /* Estilo para la transición antes de redirigir */
-    .fade-out {
-      opacity: 0; /* Desvanecimiento */
-    }
-
-  </style>
+  <!-- Animations CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- WOW.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  
+  <link rel="stylesheet" href="sobre.css">
 </head>
 
 <body>
 
-  <div class="envelope-container" onclick="redirectToIndex()">
-    <div class="envelope">
-      <div class="envelope-front">
-        <img src="icono-sobre.png" alt="Sobre" class="envelope-icon">
-      </div>
+  <div class="pre-page" id="pre_page">
+    <img src="mw-welcome-graph-left.svg" class="left-graph wow fadeInUp" data-wow-delay="1.5s" id="left-graph">
+    <img src="mw-welcome-graph-right.svg" class="right-graph wow fadeInDown" data-wow-delay="1.5s" id="right-graph">
+    <img src="mw-env-middle-layer.png" class="envelope wow fadeIn" data-wow-delay="1.5s" id="env_middle">
+    <img src="mw-env-bottom-layer.png" class="envelope wow slideInUp" data-wow-delay="1.5s" id="env_bottom">
+    <img src="mw-env-top-layer.png" class="envelope wow slideInDown" data-wow-delay="1.5s" id="env_top">
+    
+    <div class="inner wow fadeIn" data-wow-delay="1.5s" id="inner_elements">
+      <span class="icon">
+          <div class="pre-page-content">
+              <br><br>
+              <p class="welcome-text">Hugo &amp; Majo</p>
+              <p class="welcome-text-p">Se casan y te invitan a celebrar con ellos este gran día.</p>
+              <br>
+          </div>
+          <img src="wax-seal.png" class="welcome-element stamp animate-zoom-in-out" onclick="fadeOutWelcomeElements()">
+      </span>
     </div>
   </div>
-
-  <script>
-    // Función para redirigir con una transición suave
-    function redirectToIndex() {
-      // Añadir clase fade-out para la transición
-      document.querySelector('.envelope-container').classList.add('fade-out');
-
-      // Esperar a que termine la transición antes de redirigir
-      setTimeout(function () {
-        window.location.href = 'index.html';
-      }, 1000);  // Tiempo en milisegundos, debe coincidir con la duración de la transición (1s)
-    }
+  
+  
+  <script src="sobre.js">
+    // Inicializa WOW.js
+    new WOW().init();
   </script>
-
 </body>
 
 </html>

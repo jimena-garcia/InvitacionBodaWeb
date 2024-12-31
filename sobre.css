@@ -1,0 +1,237 @@
+/*------------------ Estilos Generales ---------------------*/
+@keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Estilos para la imagen de la estampilla */
+  .stamp {
+    position: relative;
+    width: 120px;
+    margin: auto;
+    display: flex;
+    z-index: 11;
+    animation: zoom-in-zoom-out 2s ease-in-out infinite;
+  }
+  
+  .stamp:hover {
+    cursor: pointer;
+  }
+  
+  /*------------------ Animaciones WOW.js ---------------------*/
+  
+  .wow {
+    visibility: hidden;
+  }
+  
+  .wow.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+  }
+  
+  .wow.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 2s;
+  }
+  
+  .wow.fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 2s;
+  }
+  
+  .wow.slideInUp {
+    animation-name: slideInUp;
+    animation-duration: 2s;
+  }
+  
+  .wow.slideInDown {
+    animation-name: slideInDown;
+    animation-duration: 2s;
+  }
+  
+  /* Definición de animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /*------------------ Estilos Pre-Page ---------------------*/
+  .pre-page {
+    background-color: rgba(255, 255, 255, 1);
+    background-image: url('ig-filter-bg-5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .pre-page .inner {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .pre-page .icon {
+    display: block;
+    margin: auto;
+  }
+  
+  .pre-page svg {
+    width: 160px;
+    height: auto;
+    margin: auto;
+    display: flex;
+    fill: var(--main-color);
+  }
+  
+  .pre-page-content {
+    text-align: center;
+    padding: 0 10%;
+    position: relative;
+    z-index: 16;
+  }
+  
+  .welcome-text {
+    font-family: var(--cursive-font-family);
+    font-size: 2.2em;
+  }
+  
+  .welcome-text-p {
+    font-family: var(--body-font-family);
+  }
+  
+  /*------------------ Gráficos Laterales ---------------------*/
+  .pre-page .left-graph,
+  .pre-page .right-graph {
+    position: absolute;
+    z-index: 11;
+    height: 100vh;
+  }
+  
+  .pre-page .left-graph {
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  .pre-page .right-graph {
+    top: 0px;
+    right: 0px;
+  }
+  
+  /*------------------ Capas de Sobre ---------------------*/
+  #env_top,
+  #env_bottom,
+  #env_middle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    overflow: visible;
+  }
+  
+  #env_top {
+    top: 0;
+    right: 0;
+    animation: slideInDown 2s ease;
+  }
+  
+  #env_bottom {
+    bottom: 0;
+    right: 0;
+    animation: slideInUp 2s ease;
+  }
+  
+  #env_middle {
+    top: 0;
+    right: 0;
+    object-fit: fill;
+    animation: fadeIn 2s ease;
+  }
+  
+  @media (max-width: 991px) {
+    .pre-page {
+      display: flex;
+      justify-content: center;
+    }
+    .pre-page .right-graph {
+      content: url(mw-welcome-graph-right.svg);
+      height: 50vh;
+    }
+    .pre-page .left-graph {
+      content: url(mw-welcome-graph-left.svg);
+      height: 50vh;
+    }
+    #env_top,
+    #env_bottom {
+      height: 35vh;
+      width: 100%;
+      margin: auto;
+      object-fit: cover;
+    }
+    #env_middle {
+      display: none;
+    }
+  }
+  

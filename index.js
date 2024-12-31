@@ -3,26 +3,37 @@ window.onload = function () {
   document.querySelector('.main-container').classList.add('visible');
 }
 
-// Función para la cuenta regresiva
-function updateCountdown() {
-  const eventDate = new Date("February 1, 2025 19:00:00").getTime();
-  const now = new Date().getTime();
-  const timeLeft = eventDate - now;
+document.addEventListener("DOMContentLoaded", function () {
+  const countdownDate = new Date("February 1, 2025 00:00:00").getTime();
 
-  if (timeLeft <= 0) {
-    document.getElementById("countdown").innerHTML = "¡Es hoy! ¡Es hoy!";
-    clearInterval(countdownInterval);
-  } else {
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+  const updateCountdown = () => {
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
 
-    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-}
+    // Calcular el tiempo restante
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-const countdownInterval = setInterval(updateCountdown, 1000);
+    // Actualizar los valores en la interfaz
+    document.querySelector(".dias div").textContent = days < 10 ? `0${days}` : days;
+    document.querySelector(".horas div").textContent = hours < 10 ? `0${hours}` : hours;
+    document.querySelector(".min div").textContent = minutes < 10 ? `0${minutes}` : minutes;
+    document.querySelector(".seg div").textContent = seconds < 10 ? `0${seconds}` : seconds;
+
+    // Si la cuenta regresiva ha llegado a 0
+    if (distance < 0) {
+      clearInterval(interval);
+      document.getElementById("countdown").innerHTML = "¡El evento ha llegado!";
+    }
+  };
+
+  // Actualizar la cuenta regresiva cada segundo
+  const interval = setInterval(updateCountdown, 1000);
+  updateCountdown(); // Llamar una vez inmediatamente para que se muestre el valor inicial
+});
+
 
 // Espera a que el documento esté completamente cargado
 document.addEventListener("DOMContentLoaded", function() {
@@ -73,4 +84,6 @@ window.addEventListener('scroll', function() {
   } catch (error) {
     console.error("Error al manejar la música:", error);
   }
+  
+
   

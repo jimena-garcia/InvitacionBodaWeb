@@ -6,19 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Invitación de Boda</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="index.css">
+
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+
+   <!-- Animations CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   <!-- WOW.js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+   
+
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="sobre.css">
+
 </head>
 
 <body>
 
+
   <header class="sticky-header">
     M&H 01.02.25
+      <ul  class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link" href="#about">Nuestra Historia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#countdown">Cuenta Regresiva</a></li>
+        <li class="nav-item"><a class="nav-link" href="#details">Detalles del Evento</a></li>
+        <li class="nav-item"><a class="nav-link" href="#guests">Número de Invitados</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gifts">Regalos</a></li>
+      </ul>
   </header>
 
   <!-- Hero / Portada -->
@@ -28,17 +47,71 @@
     <b><p class="hero-date">1 de Febrero, 7:00 PM</p></b>
   </header>
 
+   <!-- Sección Nuestra Historia -->
+<section class="section about" id="about">
+  <div class="story-box">
+    <h2 class="section-title">Nuestra Historia</h2>
+    <p class="section-text">
+      Desde el momento en que nuestros caminos se cruzaron, hemos compartido una vida llena de experiencias, crecimiento y amor. A lo largo de los años, hemos construido una relación sólida, basada en el respeto, la confianza y el apoyo mutuo. Hoy, al iniciar este nuevo capítulo de nuestras vidas, nos gustaría invitarte a acompañarnos en la celebración de nuestra unión, como testigos de una historia que sigue creciendo con el paso del tiempo.
+    </p>
+  </div>
+</section>
+
+
   <!-- Sección Cuenta Regresiva -->
-  <section class="section countdown">
-    <h2 class="section-title">Faltan:</h2>
-    <div id="countdown" class="countdown-timer"></div>
+  <section class="section countdown" id="countdown">
+  
+    <h2 class="section-title">
+      <span>
+        Save The Date
+      </span>
+    </h2>
+    <H2>
+      <span>1 Febrero, 2025</span>
+    </H2>
+   </div>
+    <div id="countdown" class="countdown-timer">
+      <div id="clock">
+        <div class="box dias">
+          <div>00</div>
+          <span>dias</span>
+        </div>
+        <div class="box horas">
+          <div>00</div>
+          <span>horas</span>
+        </div>
+        <div class="box min">
+          <div>00</div>
+          <span>minutos</span>
+        </div>
+        <div class="box seg">
+          <div>00</div>
+          <span>segundos</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div id="add-calendar">
+        <h4>Agrégalo a tu Calendario</h4>
+        <div class="calendar-link">
+          <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NmVnY3NmaTdwbXRmdHIwcmJmbmw3MmM4bjQga2FsMjcwNHNvcmFAbQ&amp;tmsrc=kal2704sora%40gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+            </svg>
+            Google Calendar
+          </a>
+        </div>
+      </div>
+      
+    </div>
   </section>
 
-  <!-- Sección Detalles del Evento -->
-  <section class="section details">
-    <h2 class="section-title">¿Dónde y Cuándo?</h2>
-    <p class="section-text">Te invitamos a ser parte de este día tan especial en dos lugares maravillosos:</p>
+<!-- Sección Detalles del Evento -->
+<section class="section details" id="details">
+  <h2 class="section-title">¿Dónde y Cuándo?</h2>
+  <p class="section-text">Te invitamos a ser parte de este día tan especial en dos lugares maravillosos:</p>
 
+  <div class="event-locations">
     <div class="event-location">
       <div class="event-location-content">
         <h3>Ceremonia Religiosa</h3>
@@ -46,54 +119,54 @@
         <p><strong>Dirección:</strong> C. 60 502, Parque Santa Lucia, Centro, 97000 Mérida, Yuc.</p>
         <p><strong>Fecha:</strong> 1 de Febrero, 7:00 PM</p>
       </div>
-      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/fb/a3/90/iglesia-de-santa-lucia.jpg?w=1200&h=-1&s=1" alt="Ceremonia Civil" class="event-location-image">
+      <img src="Imagen de WhatsApp 2024-12-30 a las 21.21.45_eafc1491.jpg" alt="Ceremonia Religiosa" class="event-location-image">
+      <button class="location-button" onclick="window.location.href= 'https://maps.app.goo.gl/P8Ro1MfU8QvfiYC1A' ">Ver Mapa</button>
     </div>
-    <button class="location-button" onclick="window.location.href= 'https://maps.app.goo.gl/P8Ro1MfU8QvfiYC1A' ">Ver Mapa</button>
 
     <div class="event-location">
       <div class="event-location-content">
         <h3>Recepción</h3>
         <h3>Salón de Eventos Baktún</h3>
         <p><strong>Dirección:</strong> Avenida Itzáez x 40 y 90-A, Mérida, Yucatán</p>
-        <p><strong>Fecha:</strong> 29 de Noviembre, 5:00 PM</p>
-        <p><strong>Vestimenta:</strong> Formal</p>
+        <p><strong>Fecha:</strong> 1 de Febrero, 8:30 PM</p>
       </div>
       <img src="https://scontent.fmid2-1.fna.fbcdn.net/v/t39.30808-6/441446941_976644251130543_5150765710373870156_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGtnDBCCOZEdhyQgguZelmiWJTEidRvsPZYlMSJ1G-w9rZoL8zZNn2ovzPKgVZR7Xte8Feh6YKkLLxEQ1P6EQ82&_nc_ohc=yy2GqOYiLD8Q7kNvgFepU0Z&_nc_oc=Adis3we41m7eRrPwYToWNW829G3V7ZwfDWNOH6WVLNuQevkNhyRMm29rhmCURAjrAfw&_nc_zt=23&_nc_ht=scontent.fmid2-1.fna&_nc_gid=AQpWu2QkYOJ-dIxOwnMxv71&oh=00_AYAASK6XwtPkCCnZcPUP823Z6kGt_wrNzeVW9Lu3WL5vwg&oe=6778B8EB" alt="Recepción" class="event-location-image">
+      <button class="location-button" onclick="window.location.href='https://maps.app.goo.gl/Ai2TGPMoHbwEdJ9MA'">Ver Mapa</button>
     </div>
+  </div>
+</section>
 
-    <button class="location-button" onclick="window.location.href='https://maps.app.goo.gl/Ai2TGPMoHbwEdJ9MA'">Ver Mapa</button>
-  </section>
 
-  <!-- Sección Nuestra Historia -->
-  <section class="section about">
-    <h2 class="section-title">Nuestra Historia</h2>
-    <p class="section-text">
-      Desde el momento en que nuestros caminos se cruzaron, hemos compartido una vida llena de experiencias, crecimiento y amor. A lo largo de los años, hemos construido una relación sólida, basada en el respeto, la confianza y el apoyo mutuo. Hoy, al iniciar este nuevo capítulo de nuestras vidas, nos gustaría invitarte a acompañarnos en la celebración de nuestra unión, como testigos de una historia que sigue creciendo con el paso del tiempo.
-    </p>
-  </section>
+
 
   <!-- Sección Número de Invitados -->
-  <section class="section guests">
+  <section class="section guests" id="guests">
     <h2 class="section-title">Número de Invitados</h2>
     <p class="section-text">
       Estamos encantados de que seas parte de este día especial. Para asegurarnos de que todos nuestros invitados se sientan cómodos, agradeceríamos que confirmaras tu asistencia con los <b><span id="allowed-guests"> 2 </span></b>lugares para ustedes. ¡Gracias por tu comprensión!
     </p>
   </section>
 
+  <section class="section gifts" id="gifts">
+    <h2 class="section-title">Regalos</h2>
+    <p class="section-text">
+      Tu presencia en nuestra boda es el mejor regalo que podríamos recibir. Sin embargo, si deseas hacer un regalo, te agradeceríamos que consideraras una contribución a nuestra luna de miel. ¡Gracias por tu generosidad!
+    </p>
+    <b class="account-number">Número de cuenta: 4815163052314526</b>
+  </section>
+
 <!-- Botón para controlar la música -->
-<button id="music-button">
+<buttonclaz id="music-button">
   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-skip-end-circle-fill" viewBox="0 0 16 16">
     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407L9.5 8.972V10.5a.5.5 0 0 0 1 0v-5a.5.5 0 0 0-1 0v1.528z"/>
   </svg>
 </button>
 
 <!-- Audio con Autoplay -->
-<audio id="music" autoplay muted>
+<audio id="music" autoplay loop>
   <source src="audioboda.mp3" type="audio/mpeg">
   Tu navegador no soporta el elemento de audio.
 </audio>
-
-
 
 
 
