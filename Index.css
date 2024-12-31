@@ -391,3 +391,110 @@ body {
 .gifts {
   background-color: #646885; /* Fondo de la sección de regalos */
 }
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Sticky Header */
+  .sticky-header {
+    flex-direction: column;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .sticky-header .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 5em 1em;
+  }
+
+  .hero-title {
+    font-size: 2.5em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.8em;
+  }
+
+  .hero-date {
+    font-size: 1.2em;
+  }
+
+  /* Section Styling */
+  .section {
+    padding: 4em 1em;
+  }
+
+  .section-title {
+    font-size: 2em;
+  }
+
+  .section-text {
+    font-size: 1.2em;
+  }
+
+  /* Story Box */
+  .story-box {
+    padding: 20px;
+  }
+
+  /* Countdown Section */
+  .countdown-timer {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .countdown-timer .box div {
+    font-size: 2em;
+  }
+
+  /* Details Section */
+  .event-location {
+    max-width: 100%;
+  }
+
+  .event-locations {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Music Button */
+  #music-button {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  /* Guests Section */
+  #allowed-guests {
+    font-size: 1rem;
+  }
+
+  /* Gifts Section */
+  .gifts-title {
+    font-size: 1.5rem;
+  }
+
+  .account-number {
+    font-size: 1.2rem;
+  }
+
+  /* General Adjustments */
+  body {
+    line-height: 1.4;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .calendar-link a {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
