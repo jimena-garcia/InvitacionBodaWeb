@@ -506,3 +506,38 @@ body {
     line-height: 1.4; /* Ajustar el espaciado entre líneas */
   }
 }
+
+/* Menú hamburguesa */
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  background-color: #646885;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  color: white;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #2d4051;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
