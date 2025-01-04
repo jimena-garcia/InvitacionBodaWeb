@@ -75,6 +75,7 @@ body {
   width: 100%;
   text-align: center;
   opacity: 0;
+  border-radius: 15px;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
@@ -489,4 +490,112 @@ body {
   text-decoration: underline; /* Eliminar subrayado al pasar el mouse */
 }
 
+/* Asegura que los checkboxes se centren y se vean juntos */
+.form-check {
+  display: inline-block;
+  margin: 0 10px;
+  text-align: center;
+}
 
+.form-check-input {
+  margin-right: 5px;
+  transform: scale(1.2); /* Opcional: ajusta el tamaño del checkbox */
+}
+
+.form-check-label {
+  font-size: 1.2em;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Centrar el contenedor de los radio buttons o checkboxes */
+.form-check-inline {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+/* Si deseas más control sobre la separación entre los checkboxes, ajusta el margen aquí */
+.form-check-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: #E07B39;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-family: 'Poiret One', serif;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+button:hover {
+  background-color: #2d4051;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Asegura que los inputs y textos dentro del formulario tengan consistencia */
+.form-control {
+  background-color: #516276;
+  color: #fff;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-label {
+  font-size: 1.3em;
+  color: #dce4c9;
+  margin-bottom: 10px;
+}
+
+/* Diseño de la sección de confirmación */
+#confirmation {
+  background-color: #516276;
+  color: #fff;
+  padding: 4em 2em;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#confirmation .section-title {
+  font-size: 2.5em;
+  margin-bottom: 1em;
+  font-family: "WindSong", serif;
+  font-weight: 500;
+}
+
+#confirmation .section-text {
+  font-size: 1.5em;
+  margin-bottom: 2em;
+  color: #dce4c9;
+}
+
+#confirmation button {
+  background-color: #333;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-family: 'Poiret One', serif;
+  transition: background-color 0.3s ease;
+}
+
+#confirmation button:hover {
+  background-color: #2d4051;
+}

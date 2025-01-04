@@ -62,13 +62,7 @@ window.addEventListener('scroll', function() {
     var music = document.getElementById('music');
     var audioIsPlaying = false;
   
-    // Desmutear después de cargar la página
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        music.muted = false; // Quitar el silencio
-      }, 100);
-    });
-  
+
     var musicButton = document.getElementById('music-button');
   
     musicButton.addEventListener('click', function() {
@@ -84,7 +78,50 @@ window.addEventListener('scroll', function() {
   } catch (error) {
     console.error("Error al manejar la música:", error);
   }
-  
+
+
+  document.getElementById("confirmationForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+
+    // Obtener los valores del formulario
+    const name = document.getElementById("name").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const isAttending = document.getElementById("attendYes").checked; // Verifica si seleccionó "Sí"
+
+    // Validar si el campo de nombre está vacío
+    if (name === "") {
+      alert("Por favor, ingresa tu nombre.");
+      return;
+    }
+
+    // Crear el mensaje de WhatsApp basado en la elección
+    let whatsappMessage = `Hola, soy ${name}, y `;
+    if (isAttending) {
+      whatsappMessage += "sí asistiré al evento.";
+    } else {
+      whatsappMessage += "no podré asistir al evento.";
+    }
+
+    // Si hay un mensaje adicional, agregarlo
+    if (message) {
+      whatsappMessage += ` ${message}`;
+    }
+
+    // Codificar el mensaje para que sea seguro para la URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    // Número de WhatsApp al que se enviará el mensaje (reemplazar con el número correcto)
+    const phoneNumber = "+529991997958"; // Ejemplo de número de teléfono
+
+    // Crear el enlace para WhatsApp
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    // Redirigir al enlace de WhatsApp
+    window.open(whatsappUrl, "_blank");
+  });
+
+
+
 
   
-  
+
