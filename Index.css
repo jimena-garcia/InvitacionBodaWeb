@@ -556,7 +556,7 @@ button:focus {
 
 /* Asegura que los inputs y textos dentro del formulario tengan consistencia */
 .form-control {
-  background-color: #516276;
+  background-color: #8c9dad;
   color: #fff;
   font-size: 1em;
   border: 1px solid #ccc;
