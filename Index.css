@@ -258,6 +258,15 @@ body {
   height: auto;
   border-radius: 10px;
   margin-top: 1em;
+ 
+  
+}
+.event-location-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 400px; /* Ajusta este valor según el tamaño deseado */
+  max-height: 500px; /* Ajusta este valor según el tamaño deseado */
 }
 
 .event-location-content h3 {
