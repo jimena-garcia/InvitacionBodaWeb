@@ -91,6 +91,7 @@ body {
   font-family: "WindSong", serif;
   font-weight: 500;
   color: #dce4c9;
+  letter-spacing: 3px;
 }
 
 .section-text {
@@ -572,12 +573,7 @@ button:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#confirmation .section-title {
-  font-size: 2.5em;
-  margin-bottom: 1em;
-  font-family: "WindSong", serif;
-  font-weight: 500;
-}
+
 
 #confirmation .section-text {
   font-size: 1.5em;
@@ -598,4 +594,76 @@ button:focus {
 
 #confirmation button:hover {
   background-color: #2d4051;
+}
+
+/* Estilo para la sección de Padres y Padrinos */
+.section.parents {
+  background-color: #516276; /* Fondo beige claro */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.parents-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.parents-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  gap: 20px;
+}
+
+.parent-column {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  background-color: #8c9dad;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.parent-column h3 {
+  font-size: 1.5rem;
+  color: #dce4c9; /* Rojo vino */
+  margin-bottom: 10px;
+}
+
+.parent-column p {
+  font-size: 1rem;
+  color: #fff;
+  margin: 8px 0;
+}
+
+.padrinos-box {
+  text-align: center;
+  background-color: #8c9dad;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.padrinos-box h3 {
+  font-size: 1.5rem;
+  color: #dce4c9;
+  margin-bottom: 10px;
+}
+
+.padrinos-box p {
+  font-size: 1rem;
+  color: #fff;
+  margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+  .parents-row {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
