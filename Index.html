@@ -206,7 +206,8 @@
   <section class="section confirmation" id="confirmation">
     <h1 class="section-title">Confirma tu asistencia</h1>
     <p class="section-text">Por favor, completa el formulario para confirmar tu asistencia por correo electronico.</p>
-    <form action="https://formsubmit.co/7b4bf0cb22dbf539a24607d19d67dff5" id="confirmationForm" method="post">
+    <form action="https://formsubmit.co/7b4bf0cb22dbf539a24607d19d67dff5" id="confirmationForm" method="post" >
+      
       <div class="mb-3">
         <label for="name" class="form-label">Tu nombre y apellido:</label>
         <input type="text" class="form-control" id="name" placeholder="Tu nombre" name="Nombre:" required>
@@ -224,7 +225,9 @@
           <label class="form-check-label" for="attendNo">
             No, no puedo.
           </label>
+
         </div>
+        <input type="hidden" name="_captcha" value="false">
       </div>
       <div class="mb-3">
         <label for="message" class="form-label">Mensaje opcional</label>
