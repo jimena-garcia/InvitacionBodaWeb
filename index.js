@@ -80,7 +80,7 @@ window.addEventListener('scroll', function() {
   }
 
 
-  document.getElementById("confirmationForm").addEventListener("submit", function(event) {
+  /* document.getElementById("confirmationForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
 
     // Obtener los valores del formulario
@@ -118,7 +118,7 @@ window.addEventListener('scroll', function() {
 
     // Redirigir al enlace de WhatsApp
     window.open(whatsappUrl, "_blank");
-  });
+  }); */
 
 
 

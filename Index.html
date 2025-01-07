@@ -20,6 +20,8 @@
 
   <link rel="stylesheet" href="index.css">
 
+  
+
 </head>
 
 <body>
@@ -89,7 +91,6 @@
             <p>Hugo Méndez Realpozo</p>
           </div>
         </div>
-        
         <!-- Caja de padrinos -->
         <div class="padrinos-box">
           <h3>Padrinos de la Boda</h3>
@@ -201,24 +202,25 @@
     </p>
   </section>
 
+  <!-- Sección Confirmación de Asistencia -->
   <section class="section confirmation" id="confirmation">
     <h1 class="section-title">Confirma tu asistencia</h1>
     <p class="section-text">Por favor, completa el formulario para confirmar tu asistencia por WhatsApp.</p>
-    <form id="confirmationForm">
+    <form action="https://formsubmit.co/7b4bf0cb22dbf539a24607d19d67dff5" id="confirmationForm" method="post">
       <div class="mb-3">
         <label for="name" class="form-label">Tu nombre y apellido:</label>
-        <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+        <input type="text" class="form-control" id="name" placeholder="Tu nombre" name="Nombre:" required>
       </div>
       <div class="mb-3">
         <label class="form-label">¿Asistirás al evento?</label>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="attendance" id="attendYes" checked>
+          <input class="form-check-input" type="radio" name="Asistencia:" id="attendYes" value="Si, me encantaría asistir" checked>
           <label class="form-check-label" for="attendYes">
             Sí, me encantaría asistir.
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="attendance" id="attendNo">
+          <input class="form-check-input" type="radio" name="Asistencia:" id="attendNo" value="No, no puedo.">
           <label class="form-check-label" for="attendNo">
             No, no puedo.
           </label>
@@ -226,7 +228,7 @@
       </div>
       <div class="mb-3">
         <label for="message" class="form-label">Mensaje opcional</label>
-        <textarea class="form-control" id="message" placeholder="Escribe tu mensaje aquí" rows="3"></textarea>
+        <textarea class="form-control" id="message" placeholder="Escribe tu mensaje aquí" rows="3" name="Mensaje"></textarea>
       </div>
       <div class="text-center">
         <button type="submit" >Confirmar asistencia</button>
@@ -235,6 +237,7 @@
   </section>
   
 
+  <!-- Sección Regalos -->
   <section class="section gifts" id="gifts">
     <h2 class="section-title">Regalos</h2>
     <p class="section-text">
