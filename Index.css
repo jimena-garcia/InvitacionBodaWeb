@@ -582,6 +582,13 @@ button:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.crucifijo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 40px; /* Ajusta este valor según el tamaño deseado */
+  max-height: 40px; /* Ajusta este valor según el tamaño deseado */
+}
 
 
 #confirmation .section-text {
